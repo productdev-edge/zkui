@@ -1,6 +1,6 @@
-FROM java:8
+FROM openjdk:8-jdk
 
-MAINTAINER Miguel Garcia Puyol <miguelpuyol@gmail.com>
+MAINTAINER Ayush Jain <realayushjain@gmail.com>
 
 WORKDIR /var/app
 
@@ -9,5 +9,3 @@ ADD config.cfg /var/app/config.cfg
 ADD bootstrap.sh /var/app/bootstrap.sh
 
 ENTRYPOINT ["/var/app/bootstrap.sh"]
-
-EXPOSE 9090
